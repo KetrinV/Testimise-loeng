@@ -1,0 +1,421 @@
+{
+  "id": "2e67e455-bb2a-4105-a0e2-b2c6b432d537",
+  "version": "2.0",
+  "name": "Ametikooli testimine",
+  "url": "https://www.ametikool.ee",
+  "tests": [{
+    "id": "9043dbcf-763a-44d8-a9ae-2ca46272f292",
+    "name": "ametikoolhomepage",
+    "commands": [{
+      "id": "34cd66b2-241d-4a5b-bb65-f5f8c73e23ae",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f07a9089-20ac-482b-bc1e-2d4271c9340d",
+      "comment": "",
+      "command": "assertText",
+      "target": "linkText=AVALEHT",
+      "targets": [
+        ["linkText=AVALEHT", "linkText"],
+        ["css=.header-nav_main > .active > .active", "css:finder"],
+        ["xpath=//a[contains(text(),'AVALEHT')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '/et')])[4]", "xpath:href"],
+        ["xpath=//div[3]/div/div/div/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'AVALEHT')]", "xpath:innerText"]
+      ],
+      "value": "AVALEHT"
+    }, {
+      "id": "7a94fc72-b412-4c30-bb39-d76c381c0ed1",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.header-nav_main > li:nth-child(2) > .active",
+      "targets": [
+        ["css=.header-nav_main > li:nth-child(2) > .active", "css:finder"],
+        ["xpath=//a[contains(text(),'Sisseastumine')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '/et')])[5]", "xpath:href"],
+        ["xpath=//div[3]/div/div/div/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": "SISSEASTUMINE"
+    }, {
+      "id": "4434a16b-effa-4c80-9788-761eae543ddf",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.header-nav_main > li:nth-child(3) > .active",
+      "targets": [
+        ["css=.header-nav_main > li:nth-child(3) > .active", "css:finder"],
+        ["xpath=//a[contains(text(),'Õppetöö')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '/et')])[15]", "xpath:href"],
+        ["xpath=//div[3]/div/div/div/ul/li[3]/a", "xpath:position"]
+      ],
+      "value": "ÕPPETÖÖ"
+    }, {
+      "id": "73a6d929-a374-4e83-8da7-098e34ae46b9",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "dfd87931-985d-4b5b-89fc-313be82ddcb2",
+    "name": "otsi",
+    "commands": [{
+      "id": "d2182fae-1f48-41b9-9849-6841ff84c82b",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "121d98de-42fb-4b85-8249-12ccacdb0539",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "290da1b2-24ee-40f7-aeda-f5c1a3e92b4c",
+      "comment": "",
+      "command": "click",
+      "target": "name=query",
+      "targets": [
+        ["name=query", "name"],
+        ["css=.header-search > input", "css:finder"],
+        ["xpath=//input[@name='query']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e51dd687-0dfd-4774-925e-d84117740d1b",
+      "comment": "",
+      "command": "type",
+      "target": "name=query",
+      "targets": [
+        ["name=query", "name"],
+        ["css=.header-search > input", "css:finder"],
+        ["xpath=//input[@name='query']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "testimine"
+    }, {
+      "id": "35484411-eb32-406f-85a2-d41a502dfdb4",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=query",
+      "targets": [
+        ["name=query", "name"],
+        ["css=.header-search > input", "css:finder"],
+        ["xpath=//input[@name='query']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "b72cc050-181c-4b62-ad57-ef6811b7dae6",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,213.60000610351562)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "26cb855c-0b17-411a-a07a-f1fa32680a42",
+      "comment": "",
+      "command": "click",
+      "target": "css=.after-search > input",
+      "targets": [
+        ["css=.after-search > input", "css:finder"],
+        ["xpath=(//input[@name='query'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='all']/form/div[4]/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5a5b8a0d-7f80-4259-a3bc-7f67ef4d6e93",
+      "comment": "",
+      "command": "click",
+      "target": "id=article",
+      "targets": [
+        ["id=article", "id"],
+        ["css=#article", "css:finder"],
+        ["xpath=//h3[@id='article']", "xpath:attributes"],
+        ["xpath=//div[@id='all']/div[2]/div/div/h3", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Uudised (5)')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "19457558-67ed-43de-90e2-ef2bd3957e95",
+    "name": "sisseastumine",
+    "commands": [{
+      "id": "92c03bf4-8114-402c-87b9-035f5459d9f7",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dd937686-730e-4fe1-a6c0-9f03953e7b11",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4340ccf0-2643-49bc-8058-57c2e972f357",
+      "comment": "",
+      "command": "click",
+      "target": "css=.header-nav_main > li:nth-child(2) > .active",
+      "targets": [
+        ["css=.header-nav_main > li:nth-child(2) > .active", "css:finder"],
+        ["xpath=//a[contains(text(),'Sisseastumine')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '/et')])[5]", "xpath:href"],
+        ["xpath=//div[3]/div/div/div/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b89aba89-a03e-4419-b2ed-ce10e4bede65",
+      "comment": "",
+      "command": "click",
+      "target": "css=.dynamic-active > .active:nth-child(1)",
+      "targets": [
+        ["css=.dynamic-active > .active:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Sisseastumine')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '/et')])[5]", "xpath:href"],
+        ["xpath=//div[3]/div/div/div/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a4897af1-86ba-4e8a-a801-8a05ffd1f87f",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,215.1999969482422)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "15cae75c-128d-4e70-a1f4-bd9ab369f494",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.header-nav_main > li:nth-child(2) > .active",
+      "targets": [
+        ["css=.header-nav_main > li:nth-child(2) > .active", "css:finder"],
+        ["xpath=//a[contains(text(),'Sisseastumine')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '/et')])[5]", "xpath:href"],
+        ["xpath=//div[3]/div/div/div/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": "SISSEASTUMINE"
+    }, {
+      "id": "88696e47-839c-45d9-81a9-a8eb5c91f6da",
+      "comment": "",
+      "command": "click",
+      "target": "css=.header-nav_main > li:nth-child(2) > .active",
+      "targets": [
+        ["css=.header-nav_main > li:nth-child(2) > .active", "css:finder"],
+        ["xpath=//a[contains(text(),'Sisseastumine')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '/et')])[5]", "xpath:href"],
+        ["xpath=//div[3]/div/div/div/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3a4682fe-d79a-4b9f-8306-13db0e033877",
+      "comment": "",
+      "command": "assertText",
+      "target": "linkText=Erialad",
+      "targets": [
+        ["linkText=Erialad", "linkText"],
+        ["css=.dynamic-active:nth-child(2) .col-3:nth-child(1) li:nth-child(1) > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Erialad')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/et/erialad')]", "xpath:href"],
+        ["xpath=//div/div/div/div/div/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Erialad')]", "xpath:innerText"]
+      ],
+      "value": "Erialad"
+    }, {
+      "id": "1738a997-f567-424e-9b6f-f36512203a3d",
+      "comment": "",
+      "command": "assertText",
+      "target": "linkText=Eelseisvad vastuvõtud",
+      "targets": [
+        ["linkText=Eelseisvad vastuvõtud", "linkText"],
+        ["css=.dynamic-active:nth-child(2) .col-3:nth-child(1) li:nth-child(2) > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Eelseisvad vastuvõtud')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/et/sisseastumine')]", "xpath:href"],
+        ["xpath=//div/div/div/div/div/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Eelseisvad vastuvõtud')]", "xpath:innerText"]
+      ],
+      "value": "Eelseisvad vastuvõtud"
+    }, {
+      "id": "c70d9cfe-3909-4f0d-9b05-eec6e457f27b",
+      "comment": "",
+      "command": "assertText",
+      "target": "linkText=Dokumendid ja vastuvõtu korraldus",
+      "targets": [
+        ["linkText=Dokumendid ja vastuvõtu korraldus", "linkText"],
+        ["css=.dynamic-active:nth-child(2) .col-3:nth-child(1) li:nth-child(3) > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Dokumendid ja vastuvõtu korraldus')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/et/dokumendid-ja-vastuvotu-korraldus')]", "xpath:href"],
+        ["xpath=//div/div/div/div/div/ul/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Dokumendid ja vastuvõtu korraldus')]", "xpath:innerText"]
+      ],
+      "value": "Dokumendid ja vastuvõtu korraldus"
+    }, {
+      "id": "45be1795-3bcb-47d8-be7a-9231d31f04fb",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "34f91134-386f-4a43-9270-62f9b25d6e12",
+    "name": "erialad",
+    "commands": [{
+      "id": "a15abdbd-505d-4e78-837d-f6ab9114249d",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "266ef9b0-5c3f-43f6-9db6-5a7273a01756",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "850f8698-7e32-413d-a0c7-1a1277149ca2",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,24)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "059d5414-6f3a-445a-9ad9-2fea1ae106eb",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.swiper-slide-active .col-3:nth-child(1) .btn",
+      "targets": [
+        ["css=.swiper-slide-active .col-3:nth-child(1) .btn", "css:finder"],
+        ["xpath=//div[2]/div/div/a/span/div/span", "xpath:position"]
+      ],
+      "value": "Vaata erialasid"
+    }, {
+      "id": "078d6e15-4cb7-4746-9119-71639849b3e0",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.swiper-slide-active .col-3:nth-child(2) .btn",
+      "targets": [
+        ["css=.swiper-slide-active .col-3:nth-child(2) .btn", "css:finder"],
+        ["xpath=//div[2]/a/span/div/span", "xpath:position"]
+      ],
+      "value": "Vaata erialasid"
+    }, {
+      "id": "d5eba367-8a8f-4591-bdfb-9955e28b0d66",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.swiper-slide-active .col-3:nth-child(3) .btn",
+      "targets": [
+        ["css=.swiper-slide-active .col-3:nth-child(3) .btn", "css:finder"],
+        ["xpath=//div[3]/a/span/div/span", "xpath:position"]
+      ],
+      "value": "Vaata erialasid"
+    }, {
+      "id": "50b4959f-c2f8-441f-9354-93f40a341993",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "7d52f142-6e4b-403e-9c66-513903978042",
+    "name": "teenused",
+    "commands": [{
+      "id": "52633e10-f6ef-46aa-93a2-95cde16a0ee2",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bb3ca3a4-9155-4d19-b9e8-cebab3e08276",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "088fc203-aa77-4ca6-b38d-0dc3f3d38f4b",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.header-nav_main > li:nth-child(6) > .active",
+      "targets": [
+        ["css=.header-nav_main > li:nth-child(6) > .active", "css:finder"],
+        ["xpath=//a[contains(text(),'Teenused')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '/et')])[44]", "xpath:href"],
+        ["xpath=//li[6]/a", "xpath:position"]
+      ],
+      "value": "TEENUSED"
+    }, {
+      "id": "5ccbfe85-affc-4a1f-b246-8323860589b7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.header-nav_main > li:nth-child(6) > .active",
+      "targets": [
+        ["css=.header-nav_main > li:nth-child(6) > .active", "css:finder"],
+        ["xpath=//a[contains(text(),'Teenused')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '/et')])[44]", "xpath:href"],
+        ["xpath=//li[6]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "759e2877-1044-4a71-a0b6-b96ac091c5e1",
+      "comment": "",
+      "command": "assertText",
+      "target": "linkText=Restoran ja kohvikud",
+      "targets": [
+        ["linkText=Restoran ja kohvikud", "linkText"],
+        ["css=.dynamic-active:nth-child(6) .col-3:nth-child(1) li:nth-child(1) > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Restoran ja kohvikud')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/et/restoran-ja-catering')]", "xpath:href"],
+        ["xpath=//li[6]/div/div/div/div/div/div/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Restoran ja kohvikud')]", "xpath:innerText"]
+      ],
+      "value": "Restoran ja kohvikud"
+    }, {
+      "id": "44c55251-8aba-44ba-b3cb-ab0c383a1ddb",
+      "comment": "",
+      "command": "assertText",
+      "target": "linkText=Juuksur",
+      "targets": [
+        ["linkText=Juuksur", "linkText"],
+        ["css=.dynamic-active:nth-child(6) .col-3:nth-child(1) li:nth-child(2) > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Juuksur')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/et/juuksur')]", "xpath:href"],
+        ["xpath=//li[6]/div/div/div/div/div/div/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Juuksur')]", "xpath:innerText"]
+      ],
+      "value": "Juuksur"
+    }, {
+      "id": "a9a19d1d-1b02-4474-a86e-685a416d0d72",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "e03f2069-83b0-489f-81da-601406be93ae",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["9043dbcf-763a-44d8-a9ae-2ca46272f292"]
+  }],
+  "urls": ["https://www.ametikool.ee/"],
+  "plugins": []
+}
